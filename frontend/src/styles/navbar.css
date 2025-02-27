@@ -1,0 +1,87 @@
+.navbar {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 1400px; /* Para que no sea demasiado ancho en pantallas grandes */
+  margin: 0 auto;
+}
+
+/* Asegurar que el logo y los enlaces se alineen correctamente */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 300px; /* Tamaño fijo para evitar que crezca demasiado */
+}
+
+.navbar-logo img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Ajustar la lista de enlaces para que se distribuya mejor */
+.nav-links {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center; /* Centrar los elementos */
+  gap: 20px;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Ajustes para los enlaces */
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s ease-in-out;
+  padding: 10px 15px; /* Espaciado para mejorar usabilidad */
+}
+
+.nav-links a:hover {
+  color: #f1c40f;
+}
+
+/* Icono de búsqueda alineado con el navbar */
+.search-icon {
+  display: flex;
+  align-items: center;
+}
+
+.search-icon img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.search-icon img:hover {
+  opacity: 0.7;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navbar-logo {
+    width: 120px; /* Ajustar el tamaño del logo en móviles */
+  }
+}

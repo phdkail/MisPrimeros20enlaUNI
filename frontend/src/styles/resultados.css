@@ -1,0 +1,118 @@
+/* 🔹 Contenedor principal de los resultados */
+.resultados-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* 🔹 Contenedor grid para mostrar 2 cards en pantallas grandes y 1 en móviles */
+  .resultados-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* 2 columnas en pantallas grandes */
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  /* 🔹 Card de cada resultado */
+  .resultado-card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* 🔹 Efecto hover en las cards */
+  .resultado-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* 🔹 Imagen dentro de la card */
+  .resultado-img {
+    width: 100%;
+    max-width: 350px;
+    height: 250px; /* Tamaño fijo para mantener consistencia */
+    object-fit: cover; /* Recorta sin distorsionar */
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* 🔹 Efecto hover en la imagen */
+  .resultado-img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* 🔹 Lista de equipos participantes */
+  .resultado-card ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .resultado-card ul li {
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  /* 🔹 Modal para visualizar la imagen en grande */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Fondo oscuro semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* 🔹 Contenedor del modal */
+  .modal {
+    position: relative;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 90%;
+    max-height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* 🔹 Botón para cerrar el modal */
+  .modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: red;
+    color: white;
+    border: none;
+    font-size: 18px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  /* 🔹 Imagen dentro del modal */
+  .modal-image {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+  }
+  
+  /* 🔹 Responsivo: en pantallas pequeñas mostrar 1 card por fila */
+  @media (max-width: 768px) {
+    .resultados-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .resultado-img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  

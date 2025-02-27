@@ -1,0 +1,59 @@
+.banner {
+  display: flex;
+  flex-direction: row; /* ✅ Ahora en fila */
+  justify-content: space-between; /* Espaciado entre elementos */
+  align-items: center;
+  padding: 50px;
+  background-color: #222;
+  color: white;
+  width: 100%;
+  max-width: 1200px; /* Limita el ancho para una mejor disposición */
+  margin: 0 auto; /* Centrar */
+}
+
+/* Contenedor de texto */
+.banner-content {
+  max-width: 50%; /* Ocupa la mitad del espacio */
+  text-align: left;
+}
+
+/* Imagen */
+.banner img {
+  width: 50%; /* ✅ Ocupa la mitad del banner */
+  max-width: 300px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Botón */
+button {
+  background-color: #8b0000;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #f1c40f;
+}
+
+/* ✅ Responsive */
+@media (max-width: 768px) {
+  .banner {
+    flex-direction: column; /* En pantallas pequeñas vuelve a columna */
+    text-align: center;
+  }
+
+  .banner-content {
+    max-width: 100%; /* El texto ocupa todo el ancho */
+    text-align: center;
+  }
+
+  .banner img {
+    width: 100%; /* ✅ La imagen se adapta al ancho completo */
+    max-width: 300px;
+    margin-top: 20px; /* Espaciado entre texto e imagen */
+  }
+}
